@@ -1,0 +1,165 @@
+:root[data-theme="light"] {
+  --text: #111111;
+  --background: #f5f8f8;
+  --primary: #4dbab9;
+  --secondary: #90e8e7;
+  --accent: #53f3f1;
+}
+:root[data-theme="dark"] {
+  --text: #ededed;
+  --background: #060909;
+  --primary: #45b0ae;
+  --secondary: #176e6d;
+  --accent: #0caca9;
+}
+
+
+
+
+
+ 
+
+*{
+  padding: 0;
+  text-transform: capitalize;
+  list-style: none;
+  text-decoration:none;
+  color: var(--text);
+  margin: 0;
+  border-radius: .3rem;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Nanum Gothic';
+  font-weight: 500;
+  background-color:  var(--background);
+  overflow-x: hidden;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400');
+
+body {
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Inter';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+section{
+  margin: 6rem;
+}
+ion-icon{
+  font-weight: 600;
+  font-size: 20px;
+}
+button {
+  --color: var(--accent);
+  padding: .3rem 1rem;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: capitalize;
+  z-index: 1;
+ }
+ 
+ button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ button:active {
+  filter: brightness(.8);
+ }
+ @media (max-width: 896px) {
+  *{
+    display: block;
+    font-size: medium;
+  }
+  .navigationTab{
+    position: relative;
+    background-color: #45b0ae;
+    width: 100%;
+  }
+  .navigationTab ion-icon{
+    display: none;
+  }
+  .logonav .navigationbtns{
+    display: block;
+    position: absolute;
+    margin-top: 4.8%;
+    right: 0;
+    height: 95vh;
+    width: 70vw;
+    border-radius: none;
+    /* background: rgba(#ffffff, #ffffff, #ffffff, 1 ); */
+    background: rgba(#b64646 #bb5959 #8f2121 .5 );
+  }
+  .gallery-item {
+      flex: 1 1 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  *{
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+}
+  .gallery-item {
+      flex: 1 1 100%;
+  }
+}
+
+ 
